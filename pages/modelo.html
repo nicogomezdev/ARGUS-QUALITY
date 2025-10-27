@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/argusquality.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <title>Argus Quality</title>
+</head>
+<body>
+    <Section class="portada">
+        <img src="../img/logoAQ.png" alt="logoAQ">
+        <nav
+        class="nav justify-content-center  ">
+        <a class="nav-link active" href="../index.html" aria-current="page">inicio</a>
+        <a class="nav-link" href="./modelo.html">Aplicativo</a>
+        <a class="nav-link " href="./nosotros.html">Nosotros</a>
+         </nav>
+    </Section>
+
+    <section class="contenido-modelo">   
+        <h3 id="t-Nosotros">Nuestras protagonistas </h3>
+        <div class="norma-nosotros">
+            <div class="texto-izq">
+                <h3>Norma ISO</h3>
+            <p>
+                Esta norma nos habla de los <b>líneamientos</b> que se deben tener en cuenta para definir, medir y evaluar la calidad del software. Sin embargo, las protagonistas principales son: las normas ISO/IEC <b>25010</b> y <b>25023</b>. <br>
+                La "25010" describe describe las caracteristicas y subcaracterísticas que determinan la calidad de un producto de software. Y la "25023" define las métricas utilizadas para su medición.
+            </p>
+            </div>
+            
+            <img src="../img/descarga.jpeg" alt="norma iso 25010" class="imagen-der">
+        </div>
+        
+        <div class="descripcionAQ">
+            <h3>Argus Quality</h3>
+            <p>
+                El software especializado en analisis y evaluación de calidad de software, basado en la normatividad vigente (ISO/IEC). Ha sido desarrollado durante bastamte tiempo, para ser el software mas preciso del mercado. Surge como un ejercicio acádemico, no obstante puede ser usado sobre cualquier software. <br>
+                Sugerimos al evaluador, ser lo mas objetivo posible, para que Argus pueda ser más preciso.
+            </p>
+            <h4>Forma de uso</h4>
+            <p>
+                El evaluador debe leerse la norma <b>ISO 25000 (SQuaRE)</b> antes de iniciar con la respectiva evaluación. Para que nuestros resultados puedan ser precisos, requerimos que los valores ingresados en las casillas a continuación, sean objetivos y lo mas ajustados a la realidad. Nuestro software va a recibir 8 párametros (segun norma ISO 25023) los cuales van a permitir al usuario evaluador recibir una calificación del software evaluado descargable en un archivo CSV o también nuestro informe final en PDF, certificado por Argus Quality. <br>
+            </p>
+            <h4>Métricas</h4>
+            
+        </div>
+
+    </section>
+
+    <section id="softwareAQ">
+        <form id="evaluacionForm">
+            <h3>Evaluación de Calidad del Software</h3>
+            <label>Funcionalidad:</label>
+            <input type="number" id="funcionalidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            
+            <label>Usabilidad:</label>
+            <input type="number" id="usabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+
+            <label>Seguridad:</label>
+            <input type="number" id="seguridad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+
+            <label>Rendimiento:</label>
+            <input type="number" id="rendimiento" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+             
+            <label>Confiabilidad:</label>
+            <input type="number" id="confiabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            
+            <label>Eficiencia:</label>
+            <input type="number" id="eficiencia" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+
+            <label>Portabilidad:</label>
+            <input type="number" id="portabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+
+            <button type="submit">Calcular</button>
+            </form>
+
+            <p id="resultado"></p>
+            <canvas id="graficoCalidad" width="400" height="400"></canvas>
+            
+
+            <div class="botonDescarga">
+                <a
+                    name=""
+                    id="btncsv"
+                    class="btn btn-info"
+                    href="#"
+                    role="button"
+                    >CSV</a> | 
+                    <button id="btnpdf">PDF</button>
+            </div>
+    </section>
+    
+    <Footer>
+        <p class="footer-rights"> © Designed and developed by NicoDev, Johanna Correa and Andres Chitiva</p>  
+    </Footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</body>
+</html>

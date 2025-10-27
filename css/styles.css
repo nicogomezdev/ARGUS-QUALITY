@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: white;
+    color: black;    
+    font-family: 'Inter', sans-serif;
+}
+h1 h2 h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; 
+    line-height: 1.2; 
+    color: #1A2C5B; 
+}
+
+p{
+    line-height: 1.1;
+    color: #222222;
+}
+/* Estilo de tarjetas*/
+.swiper {
+  width: 100%;
+  padding: 40px ;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 90%; 
+  max-width: 500px; 
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+
+/*Estilo pagina modelo*/
+.norma-nosotros{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centra verticalmente */
+  gap: 20px;          
+}
+
+.texto-izq h3 {
+  margin: 0;
+  text-align: left;
+}
+
+.texto-izq p {
+  margin: 0;
+}
+
+
+/*Estilo de tarjetas pagina nosotros*/
+
+.card-nosotros {
+  width: 50%; /* Tamaño fijo para cada tarjeta */
+  margin: 30px 0; /* Espacio entre tarjetas */
+}
+
+/* Alinear tarjetas impares a la izquierda */
+.card-nosotros:nth-child(odd) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Alinear tarjetas pares a la derecha */
+.card-nosotros:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Estructura interna de cada tarjeta */
+.card-nosotros-flexbox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Imagen circular */
+.card-nosotros-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Texto */
+.card-nosotros-info {
+  flex: 1;
+}
+
+/* En las tarjetas pares, la imagen va a la derecha */
+.card-nosotros:nth-child(even) .card-nosotros-flexbox {
+  flex-direction: row-reverse;
+}
