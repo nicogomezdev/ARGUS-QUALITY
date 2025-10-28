@@ -10,37 +10,45 @@
     <!--swipper css slides-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     
     <title>Argus Quality</title>
 </head>
 <body>
-    <Section class="portada">
-        <img src="../img/logoAQ.png" alt="logoAQ">
-        <nav
-        class="nav justify-content-center  ">
-        <a class="nav-link active" href="#" aria-current="page">inicio</a>
-        <a class="nav-link" href="./pages/modelo.html">Aplicativo</a>
-        <a class="nav-link " href="./pages/nosotros.html">Nosotros</a>
-         </nav>
-    </Section>
+    <section class="portada">
+        <img src="../img/logoAQ.png" alt="logoAQ" id="logoAQ">
+
+        <nav class="nav justify-content-center">
+        <a class="nav-link active" href="./index.html">
+        <i class="bi bi-house-door-fill"></i> Inicio
+        </a>
+        <a class="nav-link" href="./pages/modelo.html">
+        <i class="bi bi-cpu-fill"></i> Aplicativo
+        </a>
+        <a class="nav-link" href="./pages/nosotros.html">
+        <i class="bi bi-people-fill"></i> Nosotros
+        </a>
+        </nav>
+    </section>
     
     <section class="contenido">
-        <h2>Calidad del software</h2>
-        <h2> Origen</h2>
+        <h2 id="origen">CALIDAD DEL SOFTWARE</h2>
+        <h2 id="origen2"> Origen</h2>
         <div id="tarjetas">
-            <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Marco Tulio Cicerón">
-            <div class="card-body">
-                <h5 class="card-title">Calidad</h5>
-                <p class="card-text">La palabra calidad tiene su raíz en el latín qualĭtas. Difundida por Marco Tulio Cicerón. Inicialmente definida como: <br>
-                    "La propiedad o conjunto de propiedades inherentes a algo, que permiten juzgar su valor."
-                </p>
+            <div class="card" >
+                <img class="card-img-top" src="./img/ciceron.jpeg" alt="Marco Tulio Cicerón" id="ciceron">
+                <div class="card-body">
+                    <h5 class="card-title">Calidad</h5>
+                    <p class="card-text">La palabra calidad tiene su raíz en el latín qualĭtas. Difundida por Marco Tulio Cicerón. Inicialmente definida como: <br>
+                        "La propiedad o conjunto de propiedades inherentes a algo, que permiten juzgar su valor."
+                    </p>
+                </div>
             </div>
-            <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Bandera EEUU">
+            <div class="card">
+            <img class="card-img-top" src="./img/banderaUSA.jpg" alt="Bandera EEUU">
                 <div class="card-body">
                     <h5 class="card-title">Software</h5>
                     <p class="card-text">
@@ -52,173 +60,179 @@
                     </p>
                 </div>
             </div>
-            </div>
-            <h3>¿Qué es Calidad de software?</h3>
-        <p>
-            IEEE Std. 610-1990, la describe como: "El grado con el que un sistema, componente o proceso cumple los requerimientos especificados y las necesidades o expectativas del cliente o usuario."
-        </p>   
-        
         </div>
-        <!-- Swipper slides-->
-        <div class="container py-5">
-            <h2 class="mb-4 text-center">Normas</h2>
+        <article id="definicion">
+            <h3>¿Qué es Calidad de software?</h3>
+            <p>
+                <b>IEEE Std. 610-1990</b>, la describe como: "El grado con el que un sistema, componente o proceso cumple los requerimientos especificados y las necesidades o expectativas del cliente o usuario."
+                <br> Se hace necesario desde la decada de los 60 pensar en la calidad del software, dado que algunos de los programas mas complejos construidos, no tenian un orden especifico ni eran fáciles de mantener. A raiz de dicha situación, surge un nuevo equipo el de <b>QA</b><br>
+                Tal como se trata en el libro "Ingeniería de software. Pearson Educación" el cual recomendamos expandir su lectura, ya que aborda las temáticas relacionadas con la ingeniería de software, el equipo de QA. Es un equipo independiente al de desarrollo, pero que debe rendir cuentas al administrador del proyecto, ya que este último se encarga de cumplir con los horarios y presupuestos del proyecto. El equipo de QA es el encargado de mantener el proyecto bajo estandares de calidad impecables, asociados directamente a las normas vigentes (ISO). Para ello, las personas de dicho equipo deben contar con una ruta de cualidades deseadas en el software, y de la misma manera describir como se valorarán. Por lo tanto, mencionada ruta de la mano con los estandares de la normatividad vigente, definen lo que realmente significa software de “alta calidad” para cualquier sistema en particular.
+            </p>   
+        </article>
+             
+            <!-- Swipper slides-->
+            <div class="container py-5">
+                <h2 class="mb-4 text-center">Normas</h2>
 
-            <!-- Swiper -->
-            <div class="swiper">
-                <div class="swiper-wrapper">
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
 
-                <!-- Tarjeta 1 -->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 25001</h4>
-                        <h5>Procesos de gestión de calidad</h5>
-                        <p class="card-text"> 
-                            Establece la forma de planificar, medir y controlar la calidad del producto, durante su desarrollo y planificación.
-                        </p>
-                    </div>
-                    </div>
-                </div>
+                        <!-- Tarjeta 1 -->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 25001</h4>
+                                    <h5>Procesos de gestión de calidad</h5>
+                                    <p class="card-text1"> 
+                                        Establece la forma de planificar, medir y controlar la calidad del producto, durante su desarrollo y planificación. Asimismo, Gestiona la calidad desde el diseño hasta el mantenimiento del software.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Tarjeta 2 -->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 9126</h4>
-                        <h5>Modelo original de calidad de software</h5>
-                        <p class="card-text">Clasifica en seis caracteristicas principales la calidad:
-                            <ul>
-                                <li>Funcionalidad</li>
-                                <li>Fiabilidad</li>
-                                <li>Usabilidad</li>
-                                <li>Eficiencia</li>
-                                <li>Mantenibilidad</li>
-                                <li>Portabilidad</li>
-                            </ul>
-                        </p>
-                    </div>
-                    </div>
-                </div>
+                        <!-- Tarjeta 2 -->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 9126</h4>
+                                    <h5>Modelo original de calidad de software</h5>
+                                    <p class="card-text2">Clasifica en seis caracteristicas principales la calidad:
+                                        <ul>
+                                            <li>Funcionalidad</li>
+                                            <li>Fiabilidad</li>
+                                            <li>Usabilidad</li>
+                                            <li>Eficiencia</li>
+                                            <li>Mantenibilidad</li>
+                                            <li>Portabilidad</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Tarjeta 3 -->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">IEE 829</h4>
-                        <h5>Contenido de la documentación de pruebas</h5>
-                        <p class="card-text">Estandarizar la forma en que se planifican y registran las pruebas de software</p>
-                    </div>
-                    </div>
-                </div>
+                        <!-- Tarjeta 3 -->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">IEE 829</h4>
+                                    <h5>Contenido de la documentación de pruebas</h5>
+                                    <p class="card-text1">Estandarizar la forma en que se planifican y registran las pruebas de software. Facilita la trazabilidad y consistencia en los informes de prueba.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!--Tarjeta 4-->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 25010</h4>
-                        <h5>Modelo de calidad del software mas reciente</h5>
-                        <p class="card-text">Define critorios de calidad del producto</p>
-                    </div>
-                    </div>
-                </div>
+                        <!--Tarjeta 4-->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 25010</h4>
+                                    <h5>Modelo de calidad del software mas reciente</h5>
+                                    <p class="card-text1">Define criterios de calidad del producto. Clasifica atributos como funcionalidad, fiabilidad y usabilidad.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!--Tarjeta 5-->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 12207</h4>
-                        <h5>Ciclo de vida del software</h5>
-                        <p class="card-text">Establece el paso a paso que debe seguirse durante la vida del software, desde su creación hasta el último uso</p>
-                    </div>
-                    </div>
-                </div>
+                        <!--Tarjeta 5-->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 12207</h4>
+                                    <h5>Ciclo de vida del software</h5>
+                                    <p class="card-text1">Establece el paso a paso que debe seguirse durante la vida del software, desde su creación hasta el último uso. De la misma manera Define roles, actividades y productos de cada fase del desarrollo.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!--Tarjeta 6-->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 15504</h4>
-                        <h5>Evaluación de procesos</h5>
-                        <p class="card-text">Proprociona el modelo para evaluar en sus totalidad la madurez del software</p>
-                    </div>
-                    </div>
-                </div>
+                        <!--Tarjeta 6-->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 15504</h4>
+                                    <h5>Evaluación de procesos</h5>
+                                    <p class="card-text1">Proprociona el modelo para evaluar en sus totalidad la madurez del software. Permite comparar el rendimiento de procesos entre organizaciones.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!--Tarjeta 7-->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 9001</h4>
-                        <h5>Getsión de calidad</h5>
-                        <p class="card-text">Establece los requisitos para un sistema de gestión de calidad. No es dedicado unicamente a software.</p>
-                    </div>
-                    </div>
-                </div>
+                        <!--Tarjeta 7-->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 9001</h4>
+                                    <h5>Getsión de calidad</h5>
+                                    <p class="card-text1">Establece los requisitos para un sistema de gestión de calidad. No es dedicado unicamente a software y Promueve la mejora continua y la satisfacción del cliente.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!--Tarjeta 8-->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 27001</h4>
-                        <h5>Seguridad de la información</h5>
-                        <p class="card-text">Establece los parametros y las formas para gestionar la seguridad de la información.</p>
-                    </div>
-                    </div>
-                </div>
+                        <!--Tarjeta 8-->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 27001</h4>
+                                    <h5>Seguridad de la información</h5>
+                                    <p class="card-text1">Establece los parametros y las formas para gestionar la seguridad de la información. Del mismo modo implementa controles para minimizar riesgos de seguridad.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!--Tarjeta 9-->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 29119</h4>
-                        <h5>Pruebas de software</h5>
-                        <p class="card-text">Es el estandar internacional para los procesos, documentación y técnicas asociadas a las pruebas de software. Asegura que las pruebas sean repetibles y efectivas cuantas veces sea aplicada</p>
-                    </div>
-                    </div>
-                </div>
+                        <!--Tarjeta 9-->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 29119</h4>
+                                    <h5>Pruebas de software</h5>
+                                    <p class="card-text1">Es el estandar internacional para los procesos, documentación y técnicas asociadas a las pruebas de software. Asegura que las pruebas sean repetibles y efectivas cuantas veces sea aplicada. Mejora la efectividad y repetibilidad de las pruebas de software.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <!--Tarjeta 10-->
-                <div class="swiper-slide">
-                    <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">ISO 25000</h4>
-                        <h5>Requisitos y evaluación de la calidad</h5>
-                        <p class="card-text">Es el conjunto de metricas que sirven de guía para especificar y evaluar la calidad del software. Se enfoca en la medición y mejora de la calidad</p>
-                    </div>
-                    </div>
-                </div>
+                        <!--Tarjeta 10-->
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="https://via.placeholder.com/300x180" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">ISO 25000</h4>
+                                    <h5>Requisitos y evaluación de la calidad</h5>
+                                    <p class="card-text1">Es el conjunto de metricas que sirven de guía para especificar y evaluar la calidad del software. Se enfoca en la medición y mejora de la calidad. Sirve de referencia para medir y certificar la calidad del producto software.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                </div>
+                    </div>
 
-                <!-- Botones -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        <h2>Estandares</h2>
-        <img src="./img/calidad-de-sotfware.png" alt="mapa calidad de sotfware" class="img-mapa-calidad">
-            <br>
-            <p>Prueba nuestra aplicación</p>
-        <a
-            name="argus-quality-btn"
-            id="argus-quality-btn"
-            class="btn btn-outline-primary"
-            href="./pages/modelo.html"  
-            role="button" target="_blank"
-            > Argus Quality</a>
-        
+                                <!-- Botones -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <div id="std">
+                                <h2 id="std">Estandares</h2>
+                                <img src="./img/calidad-de-sotfware.png" alt="mapa calidad de sotfware" class="img-mapa-calidad">
+                            </div>
+                            <div id="pruebaAQ">
+                                <h2>Prueba nuestra aplicación</h2>
+                                <a
+                                name="argus-quality-btn"
+                                id="argus-quality-btn"
+                                class="btn btn-outline-primary"
+                                href="./pages/modelo.html"  
+                                role="button" target="_blank"
+                                > Argus Quality</a>
+                            </div>
+                        
     </section>
     <Footer>
-        <p class="footer-rights"> © Designed and developed by NicoDev, Johanna Correa and Andres Chitiva</p>  
+        <p class="footer-rights"> Designed and developed by NicoDev, Johanna Correa and Andres Chitiva ©</p>  
     </Footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/swiper-config.js"></script>

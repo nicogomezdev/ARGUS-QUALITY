@@ -17,7 +17,65 @@ p{
     line-height: 1.1;
     color: #222222;
 }
-/* Estilo de tarjetas*/
+.nav {
+  background: transparent !important;
+}
+
+/*portada*/
+.portada{
+  display: flex;
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);text-align: center;
+  align-items: center;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 0 5%;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent !important; /* elimina fondo blanco */
+  border: none;
+  transition: all 0.3s ease;
+  background-color: #000000;
+}
+.nav-link i {
+  background: transparent !important; /* sin fondo */
+  color: inherit; /* mismo color que el texto */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  color: #00c3ff !important;
+  text-shadow: 0 0 8px rgba(0, 195, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: #00c3ff !important;
+}
+#logoAQ{
+  width: 100px;
+  height: 100px;
+  margin-right: 20%;
+}
+
+
+/* Estilo de swipper*/
 .swiper {
   width: 100%;
   padding: 40px ;
@@ -35,6 +93,24 @@ p{
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 330px;
+  border: #000000 solid 2px ;
+  justify-content: center;
+  background-color: linear-gradient(180deg, #ffffff 0%, #ffe5cc 100%);
+}
+
+.card-text1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.7;
+  height: 60%;
+}
+
+.card-text2{
+  display: flex;
+  justify-content: space-between;
 }
 
 .card:hover {
@@ -42,6 +118,85 @@ p{
 }
 
 
+
+/* INDEX*/
+.contenido{
+  padding: 10% 10% 2% 10%;
+}
+
+#origen {
+  text-align: center;
+  font-weight: bold;
+
+}
+
+#origen2{
+  padding-bottom: 0% ;
+}
+
+
+#tarjetas{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+#tarjetas .card {
+  border: 7px solid black ;
+  height: 450px;
+  width: 400px;
+  text-align: center;
+  margin: 2%  4% 4% 4%;
+}
+
+#tarjetas img{
+  border-radius: 8px;
+  margin: 20px auto ;
+  width: 50%;
+  height: 50%;
+}
+
+.card-title{
+  font-weight:900;
+  color: #000000;
+}
+.card-text{
+  line-height: 1.3;
+}
+
+#definicion p{
+  line-height: 2.0;
+}
+
+#std h2{
+font-weight: bold;
+}
+
+#std img{
+  display: block;
+  margin: 0 auto;
+}
+
+#pruebaAQ h2{
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#pruebaAQ a{
+  display: block;
+  margin: 0 auto;
+  font-size: 30px;
+  margin-top: 2%;
+  width: 30%;
+}
+
+footer{
+  padding: 0;
+}
+.footer-rights{
+  padding: 0;
+}
 
 /*Estilo pagina modelo*/
 .norma-nosotros{
@@ -62,6 +217,10 @@ p{
 
 
 /*Estilo de tarjetas pagina nosotros*/
+#bodynosotros{
+  padding: 0%;
+  margin: 0;
+}
 
 .card-nosotros {
   width: 50%; /* Tamaño fijo para cada tarjeta */

@@ -2,7 +2,7 @@ let radarChart = null;
 
 document.getElementById("evaluacionForm").addEventListener("submit", function(e){
   e.preventDefault();
-
+  let titulo = document.getElementById("titulo").value;
   let funcionalidad = parseFloat(document.getElementById("funcionalidad").value);
   let usabilidad = parseFloat(document.getElementById("usabilidad").value);
   let seguridad = parseFloat(document.getElementById("seguridad").value);
@@ -19,7 +19,7 @@ document.getElementById("evaluacionForm").addEventListener("submit", function(e)
   else if(promedio < 3.5) interpretacion = "Calidad media";
   else interpretacion = "Alta calidad";
 
-  document.getElementById("resultado").innerText = `Calificación final: ${promedio.toFixed(1)} (${interpretacion})`;
+  document.getElementById("resultado").innerText = `Calificación final para software ${titulo}: ${promedio.toFixed(1)} (${interpretacion})`;
     const ctx = document.getElementById('graficoCalidad').getContext('2d');
 
   // Si ya existe un gráfico anterior, lo destruimos antes de crear uno nuevo
@@ -83,18 +83,31 @@ document.getElementById("evaluacionForm").addEventListener("submit", function(e)
 // Escuchamos el clic en el botón PDF
 document.getElementById("btnpdf").addEventListener("click", function() {
 
-  // Creamos el documento PDF
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
 
-  // Título principal
+  const logo = document.getElementById("logoAQ");
+  if (logo) {
+    const imgData = logo.src;
+    doc.addImage(imgData, "PNG", 160, 5, 30, 15); // (x, y, width, height)
+  }
+  // Título principal (en mayúscula y negrilla)
   doc.setFontSize(16);
-  doc.text("Informe de Evaluación de Calidad de Software", 20, 20);
+  doc.setFont(undefined, "bold");
+  doc.text("INFORME DE EVALUACIÓN DE CALIDAD DE SOFTWARE", 20, 30);
 
+  // Descripción con título dinámico (ajustada y en negrilla)
+  const titulo = document.getElementById("titulo").value.toUpperCase() || "SIN TÍTULO";
   doc.setFontSize(12);
-  doc.text("Resultados de las métricas (escala de 0 a 5):", 20, 35);
+  doc.setFont(undefined, "bold");
+  const textoDescripcion = `RESULTADOS DE LA EVALUACIÓN DEL SOFTWARE "${titulo}" SEGÚN LAS MÉTRICAS DE CALIDAD (ESCALA DE 0 A 5):`;
+  const lineas = doc.splitTextToSize(textoDescripcion, 200);
+  doc.text(lineas, 20, 35);
 
-  // Obtenemos los valores del formulario
+  // Restablecer fuente normal
+  doc.setFont(undefined, "normal");
+
+  // Obtener valores del formulario
   const funcionalidad = parseFloat(document.getElementById("funcionalidad").value);
   const usabilidad     = parseFloat(document.getElementById("usabilidad").value);
   const seguridad      = parseFloat(document.getElementById("seguridad").value);
@@ -104,7 +117,7 @@ document.getElementById("btnpdf").addEventListener("click", function() {
   const portabilidad   = parseFloat(document.getElementById("portabilidad").value);
 
   const promedio = (funcionalidad + usabilidad + seguridad + rendimiento + confiabilidad + eficiencia + portabilidad) / 7;
-  let interpretacion = promedio < 2 ? "Baja calidad" : (promedio < 3.5 ? "Calidad media" : "Alta calidad");
+  const interpretacion = promedio < 2 ? "Baja calidad" : (promedio < 3.5 ? "Calidad media" : "Alta calidad");
 
   // Texto con métricas
   const datos = [
@@ -114,28 +127,26 @@ document.getElementById("btnpdf").addEventListener("click", function() {
     `Rendimiento: ${rendimiento.toFixed(1)}`,
     `Confiabilidad: ${confiabilidad.toFixed(1)}`,
     `Eficiencia: ${eficiencia.toFixed(1)}`,
-    `Portabilidad: ${portabilidad.toFixed(1)}`,
+    `Portabilidad: ${portabilidad.toFixed(1)}`
   ];
 
-  // Escribimos cada línea en el PDF
-  let y = 45;
+  // Escribir métricas
+  let y = 55;
   datos.forEach(dato => {
     doc.text(dato, 25, y);
     y += 8;
   });
 
-  // Calificación final
+  // Calificación final (en negrilla)
   y += 5;
   doc.setFont(undefined, "bold");
-  doc.text(`Calificación final: ${promedio.toFixed(1)} (${interpretacion})`, 20, y);
+  doc.text(`CALIFICACIÓN FINAL: ${promedio.toFixed(1)} (${interpretacion.toUpperCase()})`, 20, y);
   doc.setFont(undefined, "normal");
 
-  // 🧠 Capturamos la gráfica de Chart.js como imagen
+  // Capturamos la gráfica
   const canvas = document.getElementById("graficoCalidad");
   const imgData = canvas.toDataURL("image/png");
-
-  // Agregamos el gráfico debajo del texto
-  doc.addImage(imgData, "PNG", 30, y + 10, 140, 140);
+  doc.addImage(imgData, "PNG", 45, y + 10, 140 , 140);
 
   // Guardamos el archivo
   doc.save("informe_calidad_software.pdf");

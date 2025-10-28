@@ -7,23 +7,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--swipper css slides-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/argusquality.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
     <title>Argus Quality</title>
 </head>
 <body>
-    <Section class="portada">
-        <img src="../img/logoAQ.png" alt="logoAQ">
-        <nav
-        class="nav justify-content-center  ">
-        <a class="nav-link active" href="../index.html" aria-current="page">inicio</a>
-        <a class="nav-link" href="./modelo.html">Aplicativo</a>
-        <a class="nav-link " href="./nosotros.html">Nosotros</a>
-         </nav>
-    </Section>
+    <section class="portada">
+        <img src="../img/logoAQ.png" alt="logoAQ" id="logoAQ">
+
+        <nav class="nav justify-content-center">
+        <a class="nav-link" href="../index.html">
+        <i class="bi bi-house-door-fill"></i> Inicio
+        </a>
+        <a class="nav-link active" href="../pages/modelo.html">
+        <i class="bi bi-cpu-fill"></i> Aplicativo
+        </a>
+        <a class="nav-link" href="../pages/nosotros.html">
+        <i class="bi bi-people-fill"></i> Nosotros
+        </a>
+        </nav>
+    </section>
 
     <section class="contenido-modelo">   
         <h3 id="t-Nosotros">Nuestras protagonistas </h3>
@@ -58,6 +67,9 @@
     <section id="softwareAQ">
         <form id="evaluacionForm">
             <h3>Evaluación de Calidad del Software</h3>
+            <label> Nombre del software a evaluar</label>
+            <input type="text" id="titulo">
+
             <label>Funcionalidad:</label>
             <input type="number" id="funcionalidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
             
@@ -99,7 +111,7 @@
     </section>
     
     <Footer>
-        <p class="footer-rights"> © Designed and developed by NicoDev, Johanna Correa and Andres Chitiva</p>  
+        <p class="footer-rights"> Designed and developed by NicoDev, Johanna Correa and Andres Chitiva ©</p>  
     </Footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/swiper-config.js"></script>
