@@ -35,67 +35,87 @@
     </section>
 
     <section class="contenido-modelo">   
-        <h3 id="t-Nosotros">Nuestras protagonistas </h3>
         <div class="norma-nosotros">
             <div class="texto-izq">
                 <h3>Norma ISO</h3>
-            <p>
+                <p>
                 Esta norma nos habla de los <b>líneamientos</b> que se deben tener en cuenta para definir, medir y evaluar la calidad del software. Sin embargo, las protagonistas principales son: las normas ISO/IEC <b>25010</b> y <b>25023</b>. <br>
                 La "25010" describe describe las caracteristicas y subcaracterísticas que determinan la calidad de un producto de software. Y la "25023" define las métricas utilizadas para su medición.
             </p>
             </div>
             
-            <img src="../img/descarga.jpeg" alt="norma iso 25010" class="imagen-der">
+            <img src="../img/norma_iso.png" alt="norma iso 25010" class="imagen-der">
         </div>
-        
+        <div class="argus">
+            <img src="../img/Argos-Panoptes.jpg" alt="Argos-Panoptes"  id="argos_img">
+            <div class="texto-der">
+                <h3>ARGOS PANOPTES</h3>
+            <p>
+                El gigante de los cien ojos, <b>Argos Panoptes</b>, es una figura de la mitología griega conocida por su incansable vigilancia. Dotado de fuerza extraordinaria, era capaz de mantener siempre parte de sus ojos abiertos, incluso mientras dormía, garantizando una observación constante. La diosa <i>Hera</i> lo designó como guardián de una sacerdotisa transformada en vaca por <i>Zeus</i>, confiando en su habilidad para no perder detalle alguno. <br> <br>
+
+                Inspirado en esa misma esencia de atención absoluta y seguridad, Argus Quality nace como un software dedicado a evaluar la calidad del software con la misma precisión del legendario vigilante. Su propósito es detectar, analizar y supervisar cada aspecto del sistema, asegurando que ningún detalle —por pequeño que sea— pase desapercibido.
+            </p>
+            </div>
+            
+        </div>
         <div class="descripcionAQ">
+            
             <h3>Argus Quality</h3>
             <p>
                 El software especializado en analisis y evaluación de calidad de software, basado en la normatividad vigente (ISO/IEC). Ha sido desarrollado durante bastamte tiempo, para ser el software mas preciso del mercado. Surge como un ejercicio acádemico, no obstante puede ser usado sobre cualquier software. <br>
-                Sugerimos al evaluador, ser lo mas objetivo posible, para que Argus pueda ser más preciso.
+                Sugerimos al evaluador ser lo mas objetivo posible, para que de la misma manera, Argus pueda ser más preciso.
             </p>
             <h4>Forma de uso</h4>
             <p>
-                El evaluador debe leerse la norma <b>ISO 25000 (SQuaRE)</b> antes de iniciar con la respectiva evaluación. Para que nuestros resultados puedan ser precisos, requerimos que los valores ingresados en las casillas a continuación, sean objetivos y lo mas ajustados a la realidad. Nuestro software va a recibir 8 párametros (segun norma ISO 25023) los cuales van a permitir al usuario evaluador recibir una calificación del software evaluado descargable en un archivo CSV o también nuestro informe final en PDF, certificado por Argus Quality. <br>
+                El evaluador debe leerse la norma <b>ISO 25000 (SQuaRE)</b> antes de iniciar con la respectiva evaluación. Para que nuestros resultados puedan ser precisos, requerimos que los valores ingresados en las casillas a continuación, sean objetivos y lo mas ajustados a la realidad. Nuestro software va a recibir 8 párametros (segun norma ISO 25023) que deben ser ingresados en una escala del 0.0 a 5.0. Los cuales van a permitir al usuario evaluador recibir una calificación del software evaluado descargable en un archivo CSV o también nuestro informe final en PDF, certificado por Argus Quality. <br>
             </p>
-            <h4>Métricas</h4>
-            
         </div>
-
     </section>
 
     <section id="softwareAQ">
         <form id="evaluacionForm">
             <h3>Evaluación de Calidad del Software</h3>
             <label> Nombre del software a evaluar</label>
-            <input type="text" id="titulo">
-
-            <label>Funcionalidad:</label>
-            <input type="number" id="funcionalidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            <input type="text" id="titulo" placeholder="Escriba el nombre del software">
             
-            <label>Usabilidad:</label>
-            <input type="number" id="usabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            <div class="campo">
+                <label>Funcionalidad:</label>
+                <input type="number" id="funcionalidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            </div>
 
-            <label>Seguridad:</label>
-            <input type="number" id="seguridad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            <div class="campo">
+                <label>Usabilidad:</label>
+                <input type="number" id="usabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            </div>
+            <div class="campo">
+                <label class="sec">Seguridad:</label>
+               <input type="number" id="seguridad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            </div>
 
-            <label>Rendimiento:</label>
-            <input type="number" id="rendimiento" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
-             
-            <label>Confiabilidad:</label>
-            <input type="number" id="confiabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
-            
-            <label>Eficiencia:</label>
-            <input type="number" id="eficiencia" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            <div class="campo1">
+                <label>Rendimiento:</label>
+                <input type="number" id="rendimiento" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            </div>
 
-            <label>Portabilidad:</label>
-            <input type="number" id="portabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            <div class="campo">
+                <label>Confiabilidad:</label>
+                <input type="number" id="confiabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            </div>
+
+            <div class="campo">
+                <label>Eficiencia:</label>
+                <input type="number" id="eficiencia" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            </div>
+            <div class="campo">
+                <label>Portabilidad:</label>
+                <input type="number" id="portabilidad" step="0.1" min="0" max="5" placeholder="0.0 a 5.0" required>
+            </div>
 
             <button type="submit">Calcular</button>
             </form>
 
             <p id="resultado"></p>
-            <canvas id="graficoCalidad" width="400" height="400"></canvas>
+            <canvas id="graficoCalidad" ></canvas>
             
 
             <div class="botonDescarga">
@@ -106,7 +126,9 @@
                     href="#"
                     role="button"
                     >CSV</a> | 
-                    <button id="btnpdf">PDF</button>
+                    <button id="btnpdf" class="btn btn-info"
+                    href="#"
+                    role="button">PDF</button>
             </div>
     </section>
     

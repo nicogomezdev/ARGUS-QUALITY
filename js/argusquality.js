@@ -19,6 +19,9 @@ document.getElementById("evaluacionForm").addEventListener("submit", function(e)
   else if(promedio < 3.5) interpretacion = "Calidad media";
   else interpretacion = "Alta calidad";
 
+
+
+
   document.getElementById("resultado").innerText = `Calificación final para software ${titulo}: ${promedio.toFixed(1)} (${interpretacion})`;
     const ctx = document.getElementById('graficoCalidad').getContext('2d');
 
@@ -80,6 +83,9 @@ document.getElementById("evaluacionForm").addEventListener("submit", function(e)
   });
 });
 
+
+
+
 // Escuchamos el clic en el botón PDF
 document.getElementById("btnpdf").addEventListener("click", function() {
 
@@ -100,7 +106,7 @@ document.getElementById("btnpdf").addEventListener("click", function() {
   const titulo = document.getElementById("titulo").value.toUpperCase() || "SIN TÍTULO";
   doc.setFontSize(12);
   doc.setFont(undefined, "bold");
-  const textoDescripcion = `RESULTADOS DE LA EVALUACIÓN DEL SOFTWARE "${titulo}" SEGÚN LAS MÉTRICAS DE CALIDAD (ESCALA DE 0 A 5):`;
+  const textoDescripcion = `RESULTADOS DE LA EVALUACIÓN DEL SOFTWARE "${titulo}" SEGÚN LAS MÉTRICAS \n DE CALIDAD (ESCALA DE 0 A 5):`;
   const lineas = doc.splitTextToSize(textoDescripcion, 200);
   doc.text(lineas, 20, 35);
 

@@ -1,3 +1,12 @@
+:root{
+  --color-primario: #00C3FF;
+  --color-secundario: #0A0A0A;
+  --color-fondo: #FFFFFF;
+  --color-fondo-secundario: #F5F7FA;
+  --color-texto: #1E1E1E;
+  --color-texto-suave: #555555;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -84,6 +93,7 @@ p{
 .swiper-slide {
   display: flex;
   justify-content: center;
+  max-height: fit-content;
 }
 
 .card {
@@ -117,6 +127,13 @@ p{
   transform: scale(1.05);
 }
 
+.mb-4 text{
+  font-weight: bold;
+}
+
+#norm{
+  font-weight: bold;
+}
 
 
 /* INDEX*/
@@ -132,6 +149,7 @@ p{
 
 #origen2{
   padding-bottom: 0% ;
+  font-weight: bold;
 }
 
 
@@ -199,28 +217,193 @@ footer{
 }
 
 /*Estilo pagina modelo*/
+.contenido-modelo{
+  padding: 8.5% 10% 2% 10%;
+}
+
 .norma-nosotros{
   display: flex;
   justify-content: space-between;
   align-items: center; /* centra verticalmente */
-  gap: 20px;          
+  gap: 50px;          
 }
 
 .texto-izq h3 {
-  margin: 0;
+  margin: 0 10% 15px 0;
   text-align: left;
+  font-weight: bold;
 }
 
 .texto-izq p {
   margin: 0;
+  padding: 0px 50px 0 10px;
+  text-align:start;
+  line-height: 1.7;
+}
+.texto-der{
+  margin: 0;
+  padding: 0px 10px 0 50px;
+  text-align:end;
+  
+}
+
+.texto-der p{
+  line-height: 1.7;
+}
+
+.imagen-der{
+  width: 60%;
+  height: auto;
+}
+#argos_img{
+  max-width: 450px;
+  height: auto;
+}
+.argus{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.argus h3{
+  font-weight: bold;
+}
+.descripcionAQ{
+  margin-top: 50px;  
+}
+.descripcionAQ h3, h4{
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.descripcionAQ p{
+  padding: 0px 50px 0 10px;
+  text-align:start;
+  line-height: 2.5;
+}
+
+#softwareAQ{
+  margin: 30px auto;
+  padding: 20px 10px;
+  max-width: 1000px;
+}
+
+#evaluacionForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  border: #000 solid 5px;
+  padding: 20px; /* 🔹 aumenta espacio interno general */
+  border: 3px solid #000; /* opcional, solo si quieres verlo */
+  border-radius: 10px;  
+}
+
+#evaluacionForm input {
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#evaluacionForm label,
+#evaluacionForm input {
+  flex: 1 1 calc(20% - 20px);
+  box-sizing: border-box;
+}
+
+input {
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 5px;
+}
+#evaluacionForm h3 {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+  font-weight: bold;
+}
+
+#funcionalidad, #usabilidad, #seguridad, #rendimiento, #confiabilidad, #eficiencia, #portabilidad  {
+  width: 95px;
+}
+
+
+#evaluacionForm button {
+  flex: 1 1 100%;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#evaluacionForm button:hover{
+  color: var(--color-primario);
+  background-color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+#btncsv
+{
+  background-color: green;
+  border: none;
+  border-radius: 20%;
+}
+
+#btnpdf{
+  background-color: red;
+  border: none;
+  border-radius: 20%;
+}
+#btncsv:hover, #btnpdf:hover {
+  transform: scale(1.1);
+  transition: all 0.6s ease-in-out;
+
+}
+#sumbit{
+  width: 30%;
+}
+
+#resultado {
+  margin-top: 20px;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#graficoCalidad{
+  display: block;
+  margin: 20px auto;
+  width: 0;       /* tamaño inicial pequeño */
+  height: 0px;
+  max-width: 500px;
+  max-height: 500px;
+  opacity: 0.4;       /* un poco transparente antes */
+  transition: all 1.6s ease-in-out; /* animación suave */
+  border-radius: 10px;
+}
+
+#graficoCalidad[width] {
+  width: 500px !important;  /* tamaño final al generarse */
+  height: 500px !important;
+  opacity: 1;
+}
+
+.botonDescarga{
+  text-align: center; /* centra el contenido dentro del div */
+  margin-top: 20px;
 }
 
 
 /*Estilo de tarjetas pagina nosotros*/
-#bodynosotros{
-  padding: 0%;
-  margin: 0;
-}
 
 .card-nosotros {
   width: 50%; /* Tamaño fijo para cada tarjeta */
